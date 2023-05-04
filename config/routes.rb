@@ -27,6 +27,7 @@ Rails.application.routes.draw do
         get :me
         post :create
       end
+      get '/users/:username', to: "users#show", constraints: {username: /.*/}
     end
   end
 end
