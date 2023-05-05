@@ -45,6 +45,8 @@ module Api
         render_error(errors: { validated: false, status: 401 }) and return if user.nil?
         render_success(payload: { validated: true, status: 200 })
       end
+
+     
     end
   end
 end
