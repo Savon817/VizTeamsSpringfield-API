@@ -1,3 +1,3 @@
 class Job < ApplicationRecord
-    serialize :job_titles, Array
+    validates :job_titles, presence: true
 end

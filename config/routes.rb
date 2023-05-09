@@ -28,7 +28,8 @@ Rails.application.routes.draw do
         post :create
       end
       get '/users/:username', to: "users#show", constraints: {username: /.*/}
-      resources :jobs, only: %i[show]
+
+      resources :jobs, only: %i[show index]
       resources :teams
       resources :employees
     end
