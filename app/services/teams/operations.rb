@@ -7,7 +7,7 @@ module Teams
         end
         def self.update_team(params)
             team = Team.find(params[:id])
-            return ServiceContract.success(team) if team.update(name: params[:name], description: params[:description], user_id: params[:user_id])
+            return ServiceContract.success(team) if team.update(name: params[:name], description: params[:description])
             ServiceContract.error(team.errors.full_messages)
         end
     end
