@@ -10,7 +10,18 @@ module Api
                     status: 200
                 }
                 render_success(payload: payload)
-              end
+            end
+
+            def index
+                jobs = Job.all
+
+                payload = {
+                    job: JobBlueprint.render_as_hash(jobs),
+                    status: 200
+                }
+                
+                render_success(payload: payload)
+            end
         end
     end
 end
