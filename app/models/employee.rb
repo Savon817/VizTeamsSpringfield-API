@@ -1,6 +1,7 @@
 class Employee < ApplicationRecord
-    validates :first_name, :last_name, presence: true
+    validates :first_name, :last_name, :pictureUrl, presence: true
 
-    has_one :job_title
+    belongs_to :job
+    belongs_to :team
     
 end
