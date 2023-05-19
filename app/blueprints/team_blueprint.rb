@@ -1,4 +1,4 @@
 class TeamBlueprint < Blueprinter::Base
     identifier :id
-    fields :name, :description
+    fields :name, :description, :employees
 end
