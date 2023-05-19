@@ -19,6 +19,14 @@ gem 'bcrypt', '>= 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# Gemfile
+gem 'rswag-api'
+gem 'rswag-ui'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rswag-specs'
+end
 
 # ======================== RACK GEMS =======================
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -46,8 +54,8 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main
 gem 'rswag'
 
 # ==================== rSwag Gems =======================
-gem 'rspec-rails'
-gem 'rswag-specs'
+# gem 'rspec-rails'
+# gem 'rswag-specs'
 
 
 
